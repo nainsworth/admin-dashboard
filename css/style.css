@@ -1,17 +1,133 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;   
-    border: 1px solid red;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 1px solid red;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 5fr;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 125px auto;
 }
 
 .sidebar {
-    grid-row: 1 / 5;
+  grid-row: 1 / 5;
+
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: repeat(2, auto);
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search > input {
+  flex: 1;
+  height: 20px;
+  margin: 8px;
+}
+
+.masthead {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: end;
+}
+
+.user {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 8px;
+  align-items: center;
+}
+
+.user > img {
+  grid-row: 1 / 3;
+}
+
+.post-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.post-btns > button {
+  width: 80px;
+  height: 30px;
+  border-radius: 16px;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.projects {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.announcements > .card {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.post {
+}
+
+.post > p:last-child {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.trending > .card {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.users {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.users > img {
+  grid-row: 1 / 3;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+}
