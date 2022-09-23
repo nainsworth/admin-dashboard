@@ -9,6 +9,11 @@ html {
   height: 100%;
 }
 
+/* temp sizing */
+img {
+  width: 30px;
+}
+
 body {
   display: flex;
   flex-direction: column;
