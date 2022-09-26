@@ -7,6 +7,7 @@
     <title>Admin Dashboard</title>
     <!-- Links -->
     <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="container">
@@ -15,23 +16,30 @@
         <!-- Logo Section -->
         <div class="logo"><img src="./img/view-dashboard.svg" alt="dashboard-svg" /> Dashboard</div>
         <!-- Nav Section -->
-        <div class="nav">
+        <nav class="sidebar-section">
           <ul>
-            <li><img src="./img/home.svg" alt="home-svg" /> Home</li>
-            <li><img src="./img/account-box.svg" alt="profile-svg" /> Profile</li>
-            <li><img src="./img/message.svg" alt="message-svg" /> Messages</li>
-            <li><img src="./img/history.svg" alt="history-svg" /> History</li>
-            <li><img src="./img/clipboard-check.svg" alt="task-svg" /> Tasks</li>
-            <li><img src="./img/account-group.svg" alt="community-svg" /> Communities</li>
+            <li><img src="./img/home.svg" alt="home-svg" class="sidebar-icon" /> Home</li>
+            <li><img src="./img/account-box.svg" alt="profile-svg" class="sidebar-icon" /> Profile</li>
+            <li><img src="./img/message.svg" alt="message-svg" class="sidebar-icon" /> Messages</li>
+            <li><img src="./img/history.svg" alt="history-svg" class="sidebar-icon" /> History</li>
+            <li><img src="./img/clipboard-check.svg" alt="task-svg" class="sidebar-icon" /> Tasks</li>
+            <li><img src="./img/account-group.svg" alt="community-svg" class="sidebar-icon" /> Communities</li>
+          </ul>
+        </nav>
+        <!-- Settings Section -->
+        <div class="sidebar-section">
+          <ul>
+            <li><img src="./img/cog.svg" alt="settings-svg" class="sidebar-icon" /> Settings</li>
+            <li><img src="./img/help-box.svg" alt="support-svg" class="sidebar-icon" /> Support</li>
+            <li><img src="./img/shield-lock.svg" alt="privacy-svg" class="sidebar-icon" /> Privacy</li>
           </ul>
         </div>
-        <!-- Settings Section -->
-        <div class="settings">
-          <ul>
-            <li><img src="./img/cog.svg" alt="settings-svg" /> Settings</li>
-            <li><img src="./img/help-box.svg" alt="support-svg" /> Support</li>
-            <li><img src="./img/shield-lock.svg" alt="privacy-svg" /> Privacy</li>
-          </ul>
+        <!-- Github Link -->
+        <div class="github">
+          <a href="https://www.github.com/META-N1CK" target="_blank" rel="noreferrer">
+            <img src="./img/github.svg" alt="Github" />
+            META-N1CK
+          </a>
         </div>
       </div>
 
@@ -218,10 +226,4 @@
       </div>
     </div>
   </body>
-  <footer>
-    <a href="https://www.github.com/META-N1CK" target="_blank" rel="noreferrer">
-      <img src="./img/github.svg" alt="Github" />
-      META-N1CK
-    </a>
-  </footer>
 </html>
