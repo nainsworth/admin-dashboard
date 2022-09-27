@@ -15,7 +15,7 @@ img {
 .container {
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-template-rows: 125px auto;
+  grid-template-rows: repeat(2, auto);
   height: 100vh;
 
   overflow: hidden;
@@ -91,6 +91,8 @@ img {
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-rows: repeat(2, auto);
+  gap: 12px;
+  padding: 24px 48px;
 }
 
 .search {
@@ -100,27 +102,68 @@ img {
 
 .search > input {
   flex: 1;
-  height: 20px;
+  height: 32px;
   margin: 8px;
+  max-width: 700px;
+  border-radius: 32px;
+  border: none;
+  background-color: #e4e4e7;
+  padding-left: 16px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search > img {
+  width: 30px;
 }
 
 .masthead {
   display: flex;
-  gap: 8px;
+  gap: 32px;
   align-items: center;
   justify-content: end;
+}
+
+.masthead > img {
+  width: 30px;
+}
+
+.masthead > .user-icon{
+  width: 60px;
+  background-color: rgb(107, 178, 240);
+  border-radius: 50%;
+}
+
+.masthead > img:hover,
+.masthead > .user-icon:hover {
+  cursor: pointer;
 }
 
 .user {
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-template-rows: 1fr 1fr;
-  column-gap: 8px;
+  grid-template-rows: repeat(2,auto);
+  column-gap: 24px;
   align-items: center;
 }
 
 .user > img {
   grid-row: 1 / 3;
+  background-color: rgb(107, 178, 240);
+  width: 80px;
+  border-radius: 50%;
+}
+
+.greeting {
+  font-weight: bold;
+  font-size: 18px;
+  align-self: flex-end;
+}
+
+.username {
+  font-weight: bold;
+  align-self: flex-start;
+  font-size: 28px;
 }
 
 .post-btns {
@@ -131,9 +174,26 @@ img {
 }
 
 .post-btns > button {
-  width: 80px;
-  height: 30px;
-  border-radius: 16px;
+  width: 100px;
+  height: 38px;
+  border-radius: 38px;
+  
+  background-color: #27272a;
+  color: #fafafa;
+  font-size: 18px;
+}
+
+.post-btns > button:hover {
+  background-color: #3f3f46;
+  cursor: pointer;
+  border: 1px solid #fafafa;
+}
+
+.post-btns > button:active {
+  background-color: #f4f4f5;
+  color:#27272a;
+  font-weight: bold;
+  border: 3px solid #27272a;
 }
 
 .main-content {
@@ -144,6 +204,7 @@ img {
   height: 100vh;
   overflow: scroll;
 
+  box-shadow: 0 6px 10px rgba(128, 128, 128, 0.426) inset;
 }
 
 .projects {
