@@ -92,7 +92,7 @@ img {
   grid-template-columns: 1fr auto;
   grid-template-rows: repeat(2, auto);
   gap: 12px;
-  padding: 24px 48px;
+  padding: 16px 48px;
 }
 
 .search {
