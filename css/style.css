@@ -93,6 +93,10 @@ img {
   grid-template-rows: repeat(2, auto);
   gap: 12px;
   padding: 16px 48px;
+
+ box-shadow: 0 6px 10px rgba(128, 128, 128, 0.426);
+  z-index: 1;
+
 }
 
 .search {
@@ -198,14 +202,13 @@ img {
 
 .main-content {
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr auto;
   column-gap: 32px;
 
-  height: 100vh;
-  overflow: scroll;
+  height: calc(100vh - 184px);
+  overflow: auto;
 
-  box-shadow: 0 6px 10px rgba(128, 128, 128, 0.426) inset;
+  
   background-color: #e4e4e7;
   padding: 36px 24px;
 }
@@ -263,9 +266,17 @@ img {
   cursor: pointer;
 }
 
+.side-content {
+display: fl;
+
+  width: 300px;
+}
+
 .announcements > .card {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
+  margin-top: 8px;
+  height: 350px;
 }
 
 .post {
@@ -282,6 +293,8 @@ img {
 .trending > .card {
   display: grid;
   grid-template-rows: repeat(4, 1fr);
+  margin-top: 8px;
+  height: 350px;
 }
 
 .users {
